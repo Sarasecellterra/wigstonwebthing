@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<!--Adds the stylesheet for the website which allows for the program to define what the ui looks like-->
+<link rel="stylesheet" href="CSStest1.css">
+</head>
+<body>
+<p>Before you file a report, have you tried these things?<p>
+<ul>
+<li> Checking if the computer is plugged in.</li>
+<li> Turning the computer off and back on.</li>
+<li> Closing the program and re-opening it.</li>
+<li> Asking if someone in the room can fix it.</li>
+<li> Looking up the problem for a solution.</li>
+<p>If none of these solutions work, then feel free to file a report below, we will be with you as soon as possible.<p>
+<p>What is the problem?<p>
+<form action="/action+page.php">
+<label for="Theerror"What is the error youre experiencing?:<.label><br>
+<input type="text" id="theerror" name="theerror" value=""><br>
+<input type="submit">
+<!--This allows for the program to ask for the error using the input box, where the submit button submits it to the spreadsheet-->
+
+<p>Where are you experiencing this?<p>
+<form action="/action+page.php">
+<label for="theplace"Where is the problem?:<.label><br>
+<input type="text" id="theplace" name="theplace" value=""><br>
+<input type="submit">
+<!--Requests the slider to be moved which then defines the severity of the problem, 100 being the maximum severity (entire network is at risk) Where 0 is the lowest (minimum risk to anything)
+</form>
+
+
+
+
+<!--<p>And the severity of the problem? (slide the slider to report the severity
+or dont move it if the problem is of very  low importance)<p>
+<form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+  <input type="range" id="b" name="b" value="50" /> +
+  <input type="number" id="a" name="a" value="0" /> =
+  <output name="result" for="a b">1</output>-->
