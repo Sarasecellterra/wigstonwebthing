@@ -1,0 +1,81 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		
+		<!-- Your CSS -->
+		<link rel="stylesheet" href="style.css">
+
+		<title>Tab name</title>
+	</head>
+	<body>
+		<main class="container">
+			<h1>Title goes here</h1>
+			
+			<div>
+				<h2>
+					Before you file a report, have you tried these things?
+				</h2>
+				<ul>
+					<li>Checking if the computer is plugged in.</li>
+					<li>Turning the computer off and back on.</li>
+					<li>Closing the program and re-opening it.</li>
+					<li>Asking if someone in the room can fix it.</li>
+					<li>Looking up the problem for a solution.</li>
+				</ul>
+			</div>
+
+			<p class="lead">
+				If none of these solutions work, then feel free to file a report below, we will
+				be with you as soon as possible.
+			</p>
+
+			<!--
+				IMPORTANT: Are you planning to use php because that is somthing I recommend avoiding.
+				I like the spreadsheet idea but it would be better if we could use an actual database.
+			-->
+
+			<form action="/action+page.php">
+				<legend>
+					What is the problem?
+				</legend>
+				<div class="form-group">
+					<label for="theError">What is the error you're experiencing?</label>
+					<input type="text" class="form-control" id="theError" placeholder="I'm having an error with...">
+					<!--
+						This allows for the program to ask for the error using the input box,
+						where the submit button submits it to the spreadsheet
+					-->
+				</div>					
+				<div class="form-group">
+					<label for="thePlace">Where are you experiencing this?</label>
+					<input type="text" class="form-control" id="thePlace" placeholder="It's happening at...">
+				</p>
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+		</main>	
+
+		<!--
+			Requests the slider to be moved which then defines the severity of the problem, 100 being the maximum severity (entire network is at risk) Where 0 is the lowest (minimum risk to anything)
+			</form>
+			<p>And the severity of the problem? (slide the slider to report the severity
+			or dont move it if the problem is of very  low importance)<p>
+			<form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+			<input type="range" id="b" name="b" value="50" /> +
+			<input type="number" id="a" name="a" value="0" /> =
+			<output name="result" for="a b">1</output>
+		-->
+
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	</body>
+</html>
