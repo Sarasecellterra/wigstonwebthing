@@ -9,14 +9,11 @@
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		
-		<!-- Your CSS -->
-		<link rel="stylesheet" href="style.css">
-
-		<title>Tab name</title>
+		<title>Report a Problem</title>
 	</head>
 	<body>
 		<main class="container">
-			<h1 class="text-center">Title goes here</h1>
+			<h1 class="text-center">Report a Problem</h1>
 			
 			<div>
 				<h2>
@@ -51,7 +48,7 @@
 				</legend>
 				<div class="form-group">
 					<label for="theError">What is the error you're experiencing?</label>
-					<input type="text" class="form-control" id="theError" placeholder="I'm having an error with...">
+					<input type="text" class="form-control" id="theError" name="error" placeholder="I'm having an error with...">
 					<!--
 						This allows for the program to ask for the error using the input box,
 						where the submit button submits it to the spreadsheet which we do not have yet
@@ -59,7 +56,7 @@
 				</div>					
 				<div class="form-group">
 					<label for="thePlace">Where are you experiencing this?</label>
-					<input type="text" class="form-control" id="thePlace" placeholder="It's happening at...">
+					<input type="text" class="form-control" id="thePlace" name="place" placeholder="It's happening at...">
 				</p>
 				<button type="submit" class="btn btn-primary">Submit</button>
 			</form>
@@ -76,8 +73,20 @@
 			<output name="result" for="a b">1</output>
 			Scrapped this bit, dont worry about it, just thought id leave it here in case I need it later
 		-->
-
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<!-- Optional JavaScript -->
+		<script>
+			$('form').on('submit', function(e){
+				let serializedArray = $(this).serializeArray();
+
+				// The following line converts the user input into an array and then to JSON.
+				// You can test it out by clicking Ctrl+Shift+I and submitting the form.
+				// I still don't know how to read and write to the file though.
+				console.log(JSON.parse(JSON.stringify(serializedArray)));
+				e.preventDefault();
+			});
+		</script>
+
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
